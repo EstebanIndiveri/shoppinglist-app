@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Ionic CDN -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <title>Vainilla-ionic</title>
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="dark">
+                <ion-title>
+                    Vainilla Ionic 
+                </ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content> 
+
+            <ion-grid fixed>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Lista de compras</ion-card-title>
+                            <ion-card-subtitle>Agrega tus articulos</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>
+                            
+                        <ion-item>
+                            <ion-label position="floating">Articulo</ion-label>
+                            <ion-input type="text" id="input-text"></ion-input>
+                          </ion-item>
+            
+                          <ion-item>
+                            <ion-label position="floating">Precio</ion-label>
+                            <ion-input type="number" id="input-number"></ion-input>
+                          </ion-item>
+                          <div margin-vertical text-right>
+                          <ion-button fill="outline" id="btn-cancel" color="danger">
+                              <ion-icon slot="start" name="close"></ion-icon>
+                              Anular
+                          </ion-button>
+                          <ion-button id="btn-add">
+                              <ion-icon slot="start" name="add"></ion-icon>
+                              Agregar
+                          </ion-button>
+                        </div>
+                        </ion-card-content>
+        
+                    </ion-card>
+                </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-list id="completelist"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <p margin>Total: $ <span id="total"></span></p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-alert-controller>
+
+            </ion-alert-controller>
+        </ion-content>
+    </ion-app>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
